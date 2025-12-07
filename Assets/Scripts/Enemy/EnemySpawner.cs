@@ -25,11 +25,27 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
-    private void SpawnEnemy()
+    public void ResetEnemyCount()
     {
-        Instantiate(enemyPrefab, transform.position, Quaternion.identity);
+        enemyCount = 0;
+    }
+
+    public void DecreaseEnemyCount()
+    {
+        enemyCount--;
+    }
+
+    public void IncreaseEnemyCount()
+    {
         enemyCount++;
     }
 
-    
+    private void SpawnEnemy()
+    {
+        GameObject enemy = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
+
+        enemy.GetComponent<Enemy>().SetSpawner(this);
+        
+        IncreaseEnemyCount();
+    }
 }
