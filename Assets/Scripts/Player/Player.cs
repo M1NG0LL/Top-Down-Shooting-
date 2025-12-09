@@ -8,9 +8,15 @@ public class Player : MonoBehaviour
     private Vector2 keyboardMovement;
     private Vector2 mousePosition;
 
+    private float camHeight;
+    private float camWidth;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        
+        camHeight = Camera.main.orthographicSize;
+        camWidth = camHeight * Camera.main.aspect;
     }
 
     void Update()
@@ -23,7 +29,12 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position + keyboardMovement * speed * Time.fixedDeltaTime);
+        Vector2 targetPos = rb.position + keyboardMovement * speed * Time.fixedDeltaTime;
+
+        float clampedX = Mathf.Clamp(targetPos.x, Camera.main.transform.position.x - camWidth, Camera.main.transform.position.x + camWidth);
+        float clampedY = Mathf.Clamp(targetPos.y, Camera.main.transform.position.y - camHeight, Camera.main.transform.position.y + camHeight);
+
+        rb.MovePosition(new Vector2(clampedX, clampedY));
 
         Vector2 lookDir = mousePosition - rb.position;
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;

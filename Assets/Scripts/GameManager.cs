@@ -47,6 +47,11 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        if (!isGameOver && score >= 3000)
+        {
+            Winning();
+        }
+
         if (isGameOver && Input.GetKeyDown(KeyCode.R))
         {
             Restart();
@@ -71,6 +76,20 @@ public class GameManager : MonoBehaviour
         isGameOver = true;
         Time.timeScale = 0f;
 
+        gameOverPanel.SetActive(true);
+        StartCoroutine(FadeIn(goFadePanel));
+
+        StartCoroutine(FadeIn(goFade));
+    }
+
+    public void Winning()
+    {
+        if (isGameOver) return;
+
+        isGameOver = true;
+        Time.timeScale = 0f;
+
+        gameOverText.text = "You Won!! \n" + "You Scored 3000 points!!";
         gameOverPanel.SetActive(true);
         StartCoroutine(FadeIn(goFadePanel));
 
