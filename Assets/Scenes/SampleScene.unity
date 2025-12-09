@@ -743,17 +743,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.010750651, y: -0.2052377}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.26, y: 2.33}
-    newSize: {x: 5.46, y: 10.28}
+    oldSize: {x: 1.13, y: 1.22}
+    newSize: {x: 1.13, y: 1.22}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.5, y: 2.5}
+  m_Size: {x: 0.8874891, y: 0.54545844}
   m_EdgeRadius: 0
 --- !u!50 &1315863603
 Rigidbody2D:
@@ -829,14 +829,14 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7818472089291592048, guid: 66d445d88733ae745b1637ce07d6ed7a, type: 3}
+  m_Sprite: {fileID: -9094806970939992802, guid: 79fcbc9b0b766ae4ab98c62e1f09a700, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 5.46, y: 10.28}
+  m_Size: {x: 1.13, y: 1.22}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -851,7 +851,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.09, y: 2.02, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1904519936}
@@ -1116,7 +1116,7 @@ Transform:
   m_GameObject: {fileID: 1904519935}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.04, y: 2.21, z: 0}
+  m_LocalPosition: {x: -0, y: 0.59, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1507,8 +1507,8 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 619394802}
   - {fileID: 2098117898}
-  - {fileID: 44432530}
   - {fileID: 1315863605}
+  - {fileID: 44432530}
   - {fileID: 1411756483}
   - {fileID: 1707185212}
   - {fileID: 2029026733}
